@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>young1881</title>
+    <link>/</link>
+    <description>Recent content on young1881</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <copyright>Copyright &amp;copy; 2022 young1881
+</copyright>
+    <lastBuildDate>Tue, 12 Oct 2021 23:20:50 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>书评：《货币的非国家化》</title>
+      <link>/posts/%E4%B9%A6%E8%AF%84%E8%B4%A7%E5%B8%81%E7%9A%84%E9%9D%9E%E5%9B%BD%E5%AE%B6%E5%8C%96/</link>
+      <pubDate>Tue, 12 Oct 2021 23:20:50 +0000</pubDate>
+      
+      <guid>/posts/%E4%B9%A6%E8%AF%84%E8%B4%A7%E5%B8%81%E7%9A%84%E9%9D%9E%E5%9B%BD%E5%AE%B6%E5%8C%96/</guid>
+      <description>&lt;p&gt;《货币的非国家化》是哈耶克晚年最后一本经济学专著。他在书中颠覆了正统的货币制度观念：既然在一般商品、服务市场上自由竞争最有效率，那为什么不能在货币领域引入自由竞争？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>/docs/example-doc/chapter-1/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/chapter-1/</guid>
+      <description>&lt;p&gt;This is chapter 1 of example doc.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 1</title>
+      <link>/docs/example-doc/nested-chapter/chapter-1/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/nested-chapter/chapter-1/</guid>
+      <description>&lt;p&gt;This is chapter 1 of nested chapter.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2</title>
+      <link>/docs/example-doc/chapter-2/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/chapter-2/</guid>
+      <description>&lt;p&gt;This is chapter 2 of example doc.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2</title>
+      <link>/docs/example-doc/nested-chapter/chapter-2/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/example-doc/nested-chapter/chapter-2/</guid>
+      <description>&lt;p&gt;This is chapter 2 of nested chapter.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
