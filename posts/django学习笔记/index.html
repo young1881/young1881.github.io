@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  dir="ltr"
+  
+><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<title>Django学习笔记 | young1881</title>
+
+<meta name="generator" content="Hugo Eureka 0.9.3" />
+<link rel="stylesheet" href="/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css">
+<script defer src="/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload"
+  href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&amp;family=Noto&#43;Serif&#43;SC:wght@400;600;700&amp;display=swap"
+  as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css"
+   media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"
+   crossorigin></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/dart.min.js"
+     crossorigin></script>
+<link rel="stylesheet" href="/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css" media="print" onload="this.media='all';this.onload=null">
+
+
+<script defer type="text/javascript" src="/js/fontawesome.min.fbf58334762fcb42c16e0593596bb7b04a0c32bf8e0cdd596701a58706a96ef120cb2abab225e9591ee227ffd9043e5a.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+   integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"  media="print"
+  onload="this.media='all';this.onload=null" crossorigin>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js" 
+  integrity="sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY"  crossorigin></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js"
+   integrity="sha384-&#43;XBljXPPiv&#43;OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"  crossorigin></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+      ],
+    });
+  });
+</script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js" 
+  integrity="sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0"  crossorigin></script>
+
+
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_32x32_fill_box_center_3.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icon_hu64421c6c7700f606f0ad45d807017b09_5843_180x180_fill_box_center_3.png">
+
+<meta name="description"
+  content="利用Django进行web开发时编写的笔记">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1 ,
+      "name":"博客",
+      "item":"/posts/"},{
+      "@type": "ListItem",
+      "position": 2 ,
+      "name":"Django学习笔记",
+      "item":"/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"}]
+}
+</script>
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+    },
+    "headline": "Django学习笔记 | young1881","datePublished": "2022-06-12T23:20:50+00:00",
+    "dateModified": "2022-06-12T23:20:50+00:00",
+    "wordCount":  876 ,
+    "author": {
+        "@type": "Person",
+        "name": ["young1881"]
+    },
+    "publisher": {
+        "@type": "Person",
+        "name": "WANG Chucheng",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/images/icon.png"
+        }
+        },
+    "description": "\u003cp\u003e利用Django进行web开发时编写的笔记\u003c\/p\u003e"
+}
+</script><meta property="og:title" content="Django学习笔记 | young1881" />
+<meta property="og:type" content="article" />
+
+
+<meta property="og:image" content="/images/icon.png">
+
+
+<meta property="og:url" content="/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" />
+
+
+
+
+<meta property="og:description" content="利用Django进行web开发时编写的笔记" />
+
+
+
+
+<meta property="og:locale" content="zh" />
+
+
+
+
+<meta property="og:site_name" content="young1881" />
+
+
+
+
+
+
+<meta property="article:published_time" content="2022-06-12T23:20:50&#43;00:00" />
+
+
+<meta property="article:modified_time" content="2022-06-12T23:20:50&#43;00:00" />
+
+
+
+<meta property="article:section" content="posts" />
+
+
+<meta property="article:tag" content="笔记" />
+
+
+
+
+
+
+  <body class="flex min-h-screen flex-col">
+    <header
+      class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"
+    >
+      <div class="mx-auto w-full max-w-screen-xl"><script>
+    let storageColorScheme = localStorage.getItem("lightDarkMode")
+    if (((storageColorScheme == 'Auto' || storageColorScheme == null) && window.matchMedia("(prefers-color-scheme: dark)").matches) || storageColorScheme == "Dark") {
+        document.getElementsByTagName('html')[0].classList.add('dark')
+    }
+</script>
+<nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0">
+    <a href="/" class="me-6 text-primary-text text-xl font-bold">young1881</a>
+    <button id="navbar-btn" class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <div id="target"
+        class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20">
+        <div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0">
+            <a href="/#about" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  border-transparent  me-4">关于</a>
+            <a href="/posts/" class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2  selected-menu-item  me-4">博客</a>
+        </div>
+
+        <div class="flex">
+            <div class="relative pt-4 md:pt-0">
+                <div class="cursor-pointer hover:text-eureka" id="lightDarkMode">
+                    <i class="fas fa-adjust"></i>
+                </div>
+                <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id="is-open">
+                </div>
+                <div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40"
+                    id='lightDarkOptions'>
+                    <span class="px-4 py-1 hover:text-eureka" name="Light">浅色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Dark">深色</span>
+                    <span class="px-4 py-1 hover:text-eureka" name="Auto">自动</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id="is-open-mobile">
+    </div>
+
+</nav>
+<script>
+    
+    let element = document.getElementById('lightDarkMode')
+    if (storageColorScheme == null || storageColorScheme == 'Auto') {
+        document.addEventListener('DOMContentLoaded', () => {
+            window.matchMedia("(prefers-color-scheme: dark)").addEventListener('change', switchDarkMode)
+        })
+    } else if (storageColorScheme == "Light") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'sun')
+        element.firstElementChild.classList.add('fa-sun')
+    } else if (storageColorScheme == "Dark") {
+        element.firstElementChild.classList.remove('fa-adjust')
+        element.firstElementChild.setAttribute("data-icon", 'moon')
+        element.firstElementChild.classList.add('fa-moon')
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        getcolorscheme();
+        switchBurger();
+    });
+</script>
+</div>
+    </header>
+    <main class="grow pt-16">
+        <div class="pl-scrollbar">
+          <div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8">
+  
+  
+  <div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12">
+    <div
+      class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"
+    >
+      <article class="prose">
+  <h1 class="mb-4">Django学习笔记</h1>
+
+  <div
+  class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"
+>
+  <div class="me-6 my-2">
+    <i class="fas fa-calendar me-1"></i>
+    <span
+      >2022-06-12</span
+    >
+  </div>
+  <div class="me-6 my-2">
+    <i class="fas fa-clock me-1"></i>
+    <span>5分钟阅读时长</span>
+  </div>
+
+  
+    <div class="me-6 my-2">
+      <i class="fas fa-folder me-1"></i>
+      
+        <a href="/categories/%E5%AD%A6%E4%B9%A0/" class="hover:text-eureka"
+          >学习</a
+        >
+      
+    </div>
+  
+
+  
+</div>
+
+
+  
+  
+
+  <p>利用Django进行web开发时编写的笔记</p>
+<h5 id="1-django介绍">1 Django介绍</h5>
+<h6 id="起源">起源</h6>
+<ul>
+<li>2005年，采用python编写的开源web框架</li>
+<li>早期Django主要做新闻和内容管理</li>
+<li>重量级的python web框架，django配备了常用的大部分组件，包含：
+<ul>
+<li>基本配置文件/路由系统</li>
+<li>模型层M/模板层T/视图层V</li>
+<li>cookies和session</li>
+<li>分页及发邮件</li>
+<li>admin管理后台</li>
+</ul>
+</li>
+</ul>
+<h6 id="用途">用途</h6>
+<ul>
+<li>网站/微信公众号/小程序后端开发</li>
+<li>人工智能平台融合</li>
+<li>……</li>
+</ul>
+<h5 id="2-django项目结构">2 Django项目结构</h5>
+<h6 id="创建项目">创建项目</h6>
+<ul>
+<li>成功安装后，虚拟机终端出现django-admin命令</li>
+<li>执行 <code>django-admin startproject project_name</code> ，即可创建出项目文件夹</li>
+</ul>
+<h6 id="启动项目">启动项目</h6>
+<ul>
+<li>cd进入到项目文件夹</li>
+<li>执行 <code>py manage.py runserver</code></li>
+<li>访问http://127.0.0.1:8000</li>
+</ul>
+<h6 id="关闭服务">关闭服务</h6>
+<ul>
+<li>方式1：在runserver启动终端下执行<code>ctrl+c</code></li>
+<li>方式2：在其他终端下，执行 <code>sudo lso -i:8000</code> 查询django的id，执行 <code>kill -9</code> 对应的django进程id</li>
+</ul>
+<h6 id="managepy">manage.py</h6>
+<ul>
+<li><code>py manage.py runserver</code> 启动服务</li>
+<li><code>py manage.py startapp</code> 创建应用</li>
+<li><code>py manage.py migrate</code> 数据库迁移</li>
+<li>直接执行 <code>py manage.py</code> 查询所有的django子命令</li>
+</ul>
+<h6 id="项目同名文件夹">项目同名文件夹</h6>
+<ul>
+<li><code>__init__</code> ：python包的初始化文件</li>
+<li><code>wsgi.py</code> ：web服务网相关的配置文件</li>
+<li><code>urls.py</code> ：项目的主路由配置——http请求进入django时，优先调用该文件</li>
+<li><code>settings.py</code>：项目的配置文件——包含项目启动时需要的配置</li>
+</ul>
+<h6 id="settingspy">settings.py</h6>
+<ul>
+<li>配置项分为公有配置和自定义配置</li>
+<li>公有配置为django官方提供的基础配置
+<ul>
+<li><code>ALLOWED_HOSTS</code>：设置允许访问到本项目的host头值
+<ul>
+<li><code>[]</code> 空列表则只有localhost可以访问</li>
+<li><code>[‘*’]</code> 表示任何请求头的host都可以访问到该项目</li>
+<li>指定网络设备如果内网环境下其他主机想要访问该站点，需要加 <code>ALLOWED_HOSTS=[‘内网ip’]</code></li>
+</ul>
+</li>
+<li><code>BASE_DIR</code>：用于绑定当前项目的绝对路径，所有文件夹都依赖于该路径</li>
+<li><code>DEBUG</code>：用于配置django的启动模式，<code>True</code> 表示开发环境中使用，<code>False</code> 表示当前项目运行在生产环境中</li>
+<li><code>INSTALLED_APPS</code>：指定当前项目中安装的应用列表</li>
+<li><code>MIDDLEWARE</code>：用于注册中间件</li>
+<li><code>TEMPLATES</code>：用于指定模板的配置信息</li>
+<li><code>DATABASES</code>：用于指定数据库的配置信息</li>
+<li><code>LANGUAGE_CODE</code>，<code>TIME_ZONE</code></li>
+<li><code>ROOT_URLCONF </code>用于配置主url配置</li>
+</ul>
+</li>
+</ul>
+<h6 id="urlspy">urls.py</h6>
+<ul>
+<li>
+<p>定义：unifrom resourse locator</p>
+</li>
+<li>
+<p>作用：表示互联网上某个资源的地址</p>
+</li>
+<li>
+<p>格式：<code>protocol :// hostname[:port] / path [?query][#fragment]</code></p>
+<ul>
+<li>protocol
+<ul>
+<li>http通过HTTP访问该资源</li>
+<li>https通过安全的HTTPS访问该资源</li>
+<li>file是本地计算机上的文件</li>
+</ul>
+</li>
+<li>hostname：存放资源的服务器的DNS主机名、域名或IP地址</li>
+<li>port
+<ul>
+<li>整数，可选，省略时使用方案的默认端口</li>
+<li>各种传输协议都有默认的端口号，如http的默认端口为80</li>
+</ul>
+</li>
+<li>path</li>
+<li>query
+<ul>
+<li>可选，用于给动态网页传递参数</li>
+<li>可以有多个参数，用 <code>&amp;</code> 隔开，每个参数的名和值用 <code>=</code> 隔开</li>
+</ul>
+</li>
+<li>fragment</li>
+</ul>
+</li>
+<li>
+<p>处理url请求</p>
+<ul>
+<li>django从配置文件中根据ROOT_URLCONF找到主路由文件</li>
+<li>加载主路由文件中的 <code>urlpatterns</code> 变量</li>
+<li>依次匹配 <code>urlpatterns</code> 中的 <code>path</code>，匹配到第一个合适的中断后续匹配</li>
+<li>匹配成功：调用对应的视图函数处理请求，返回相应；匹配失败：返回404相应</li>
+</ul>
+</li>
+<li>
+<p>视图函数</p>
+<ul>
+<li>
+<p>用于接收一个浏览器请求(<code>HttpRequest</code>对象)并通过 <code>HttpResponse</code> 对象返回相应的函数</p>
+</li>
+<li>
+<pre><code class="language-python">#语法
+def xxx_view(request[,else]):
+    return HttpResponse
+
+#样例
+from django.http import HttpResponse
+def page1_view(request):
+    html = '&lt;h1&gt;这是第一个页面&lt;/h1&gt;'
+    return HttoResponse(html)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>路由配置</p>
+<ul>
+<li>
+<pre><code>#path()函数
+from django.urls import path
+path(route, views, name=None)
+
+#path转换器样例
+path('page/&lt;int:page&gt;', views.xxx)
+
+#re_path()
+#注意正则表达式的使用
+re_path(reg, view, name=xxx)
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3-请求与相应">3 请求与相应</h5>
+<ul>
+<li>
+<p>定义</p>
+<ul>
+<li>请求是浏览器通过HTTP协议发送给服务器端的数据</li>
+<li>响应是服务器接收到请求后做相应的处理后回复给浏览器的数据</li>
+</ul>
+</li>
+<li>
+<p>Django收到http协议的请求后，会根据请求数据创建 <code>HttpRequest</code> 对象，其通过属性描述了请求的所有相关信息</p>
+<ul>
+<li><code>path_info</code>：URL字符串</li>
+<li><code>method</code>：字符串，表示请求方法（请求方法：<code>GET</code> <code>HEAD</code> <code>POST</code> <code>PUT</code> <code>DELETE</code> <code>CONNECT</code> <code>OPTIONS</code> <code>TRACE</code>）</li>
+<li><code>GET</code>：<code>QueryDict</code>查询字典的对象，包含 <code>GET</code> 请求方式的所有数据</li>
+<li><code>POST</code>：<code>QueryDict</code>查询字典的对象，包含 <code>POST</code> 请求方式的所有数据</li>
+<li><code>FILES</code>：类似于字典的对象，包含所有上传的文件信息</li>
+<li><code>COOKIES</code>：python字典，包含所有的cookie，键和值都是字符串</li>
+<li><code>session</code>：似于字典的对象，表示当前的对话</li>
+<li><code>body</code>：字符串，请求体的内容( <code>POST</code> 或 <code>PUT</code> )</li>
+<li><code>scheme</code>：请求协议</li>
+<li><code>request.get_full_path()</code>：请求的完整路径</li>
+<li><code>request.META</code>：请求中的元数据，例如 <code>request.META[‘REMOTE_ADDR’]</code> 表示客户端IP地址</li>
+</ul>
+</li>
+<li>
+<p>响应状态码 Status Code</p>
+<ul>
+<li>200 请求成功</li>
+<li>301 永久重定向：转移到其他url</li>
+<li>404 不存在</li>
+<li>500 内部服务器错误</li>
+</ul>
+</li>
+<li>
+<p>响应对象</p>
+<ul>
+<li>
+<pre><code class="language-python">#构造函数格式：
+HttpResponse(content=响应体, content_type=响应体数据类型, status=状态码)
+
+#常见的content_type
+#'text/html'(默认，html), 'text/plain',
+#'text/css', 'text/javascript'...
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><code>GET</code> 处理</p>
+<ul>
+<li>一般用于向服务器获取数据</li>
+<li>能够产生 <code>GET</code> 请求的场景
+<ul>
+<li>浏览器地址栏输入URL回车后</li>
+<li><code>&lt;a href=&quot;…&quot;&gt;</code></li>
+<li>form表单中的 <code>method</code> 为 <code>get</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>POST</code> 处理</p>
+<ul>
+<li>一般用于向服务器提交大量/隐私数据</li>
+<li>客户端通过表单等 <code>POST</code> 请求将数据传递给服务器端</li>
+<li>取消 setting.py 中的 csrf 验证，否则django会拒绝客户端发来的 <code>POST</code> 请求并报403响应</li>
+</ul>
+</li>
+</ul>
+<h5 id="4-django设计模式与模板层">4 Django设计模式与模板层</h5>
+<ul>
+<li>
+<p>传统的MVC(Model-View-Controller)</p>
+<ul>
+<li>M模型层，主要用于对数据库层的封装</li>
+<li>V视图层，主要向用户展示结果（WHAT+HOW）</li>
+<li>C控制器，用于处理骑牛、获取数据、返回结果</li>
+</ul>
+</li>
+<li>
+<p>Django的MTV(Model-Template-View)</p>
+<ul>
+<li>M模型层，负责与数据库交互</li>
+<li>T模板层，负责呈现内容到浏览器(HOW)</li>
+<li>V视图层，是核心，负责接受请求、获取数据、返回结果(WHAT)</li>
+</ul>
+</li>
+<li>
+<p>模板</p>
+<ul>
+<li>
+<p>模板可以根据视图中传递的字典数据动态生成相应的HTML网页</p>
+</li>
+<li>
+<p>模板配置</p>
+<ul>
+<li>创建模板文件夹 &lt;项目名&gt;/templates</li>
+<li>在settings.py中TEMPLATES配置项
+<ul>
+<li>BACKEND：指定模板的引擎</li>
+<li>DIRS：模板的搜索目录（可以是一个或者多个）<code>’DIRS’: [BASE_DIR / 'templates']</code></li>
+<li>APP_DIRS：是否在应用的templates文件夹中搜索模板文件</li>
+<li>OPTIONS：有关模板的选项</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>加载方式</p>
+<ul>
+<li>
+<pre><code class="language-python">#方案一
+from django.template import loader
+t = loader.get_template('TemplateName')
+html = t.render()
+return HttpResponse(html)
+</code></pre>
+</li>
+<li>
+<pre><code class="language-python">#方案二
+from django.shortcuts import render
+return render(request, 'TemplateName',dic)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>视图层与模板层之间的交互</p>
+<ul>
+<li>
+<pre><code class="language-python">#视图函数将变量封装到字典传递到模板
+def xxx_view(request):
+    dic = {
+        'var1':'value1'
+        'var2':'value2'
+    }
+    return render(request, 'xxx.html', dic)
+</code></pre>
+</li>
+<li>
+<p>能够传递到模板的数据类型：str, int, list, tuple, dict, func, obj</p>
+</li>
+<li>
+<p>模板中通过 <code>{{ var }}</code> <code>{{ var.index }}</code> <code>{{ var.key }}</code> <code>{{ obj.method }}</code> <code>{{ func }}</code>来调用变量</p>
+</li>
+</ul>
+</li>
+<li>
+<p>标签</p>
+<ul>
+<li>
+<pre><code class="language-html">{% 标签 %}
+...
+{% 结束标签 %}
+</code></pre>
+</li>
+<li>
+<p>内置变量forloop</p>
+</li>
+</ul>
+</li>
+<li>
+<p>模板过滤器</p>
+<ul>
+<li>在变量输出时对变量的值进行处理</li>
+<li><code>{{ var | lower }}</code> <code>{{ var | upper }}</code> <code>{{ var | safe }}</code> <code>{{ var | add: “n” }}</code> …</li>
+</ul>
+</li>
+<li>
+<p>模板的继承</p>
+<ul>
+<li>
+<p>父模板中</p>
+<ul>
+<li>定义父模板中的block标签</li>
+<li>表示出哪些在子模块中可以被修改</li>
+<li>block标签：在父模块中定义，在子模块中覆盖</li>
+</ul>
+</li>
+<li>
+<p>子模块中</p>
+<ul>
+<li>
+<pre><code class="language-html">#第一行
+{% entends 'base.html' %}
+#子模块重写父模块中的内容块
+{% block block_name %}
+...
+{% endblock %}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>注意：模板继承时，服务器端的动态内容无法继承</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="5-再论url">5 再论url</h5>
+<ul>
+<li>
+<p>代码中url出现的位置</p>
+<ul>
+<li>html中
+<ul>
+<li><code>&lt;a href='url'&gt;…&lt;/a&gt;a&gt;</code></li>
+<li><code>&lt;form action = ‘url’, method = ‘post'&gt;</code></li>
+</ul>
+</li>
+<li>视图函数中的302跳转 <code>HttpResponseRedirect('url')</code></li>
+</ul>
+</li>
+<li>
+<p>url书写规范</p>
+<ul>
+<li>绝对地址：http://127.0.0.1:8000/page/1</li>
+<li>相对地址：<code>‘/page/1’</code> 与 <code>‘page/1’</code> 的区别</li>
+</ul>
+</li>
+<li>
+<p>url反向解析</p>
+<ul>
+<li>
+<p>用path定义的名称来动态查找相应的路由</p>
+</li>
+<li>
+<p><code>{% url ‘name’ ‘var1’ ‘var2’ %}</code></p>
+</li>
+<li>
+<pre><code class="language-python">#在视图函数中可以用django的reverse方法反向解析
+from django.urls import reverse
+reverse('name', args=[], kwargs=[])
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="6-静态文件">6 静态文件</h5>
+<ul>
+<li>
+<p>图片,css,js,音频,视频等</p>
+</li>
+<li>
+<p>静态文件配置 setting.py中</p>
+<ul>
+<li>
+<p>配置静态文件的访问路径</p>
+</li>
+<li>
+<pre><code class="language-python">#配置静态文件储存位置
+#file: setting.py
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+</code></pre>
+</li>
+<li>
+<pre><code class="language-html">#模板中访问静态文件
+{% load static %}
+&lt;img src='{% static img/xxx.jpg' %}'
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="7-应用">7 应用</h5>
+<ul>
+<li>
+<p>应用是在django中是一个独立的业务模块，可以包含自己的路由，模板，视图，模型</p>
+</li>
+<li>
+<p>创建应用</p>
+<ul>
+<li><code>py manage.py startapp projectName</code></li>
+<li>setting.py的INSTALLED_APPS列表中配置安装</li>
+</ul>
+</li>
+<li>
+<p>配置分布式路由</p>
+<ul>
+<li>主路由中调用include函数 <code>include(‘app名字.url模块名’)</code> 用于将当前路由转到各个应用的路由配置文件</li>
+<li>应用下配置urls.py</li>
+</ul>
+</li>
+<li>
+<p>应用下的模板</p>
+<ul>
+<li>应用下手动创建templates文件夹</li>
+<li>settings.py中开启应用模板功能</li>
+</ul>
+</li>
+</ul>
+<h5 id="8-模型层">8 模型层</h5>
+<ul>
+<li>
+<p>django配置mysql</p>
+<ul>
+<li>创建数据库</li>
+<li>进入mysql数据库执行</li>
+<li>指定<code>‘ENGINE’</code> <code>‘NAME’</code> ‘<code>USER’</code> <code>‘PASSWORD’</code> <code>‘HOST’</code> <code>‘PORT’</code></li>
+</ul>
+</li>
+<li>
+<p>什么是模型</p>
+<ul>
+<li>一个python类，由django.db.models.Model派生出的自雷</li>
+<li>一个模型类代表数据库中的一张数据表</li>
+<li>模型类中每一个类属性都代表数据库中的一个字段</li>
+<li>模型是数据交互的接口，是表示和操作数据库的方法和方式</li>
+</ul>
+</li>
+<li>
+<p>ORM框架</p>
+<ul>
+<li>Object Relational Mapping</li>
+<li>只需要面向对象编程，不需要面向数据库编写代码</li>
+<li>实现了数据模型与数据库的解耦，屏蔽了不同数据库操作上的差异</li>
+<li>类→数据表，对象→数据行，属性→字段</li>
+</ul>
+</li>
+<li>
+<p>模型类定义</p>
+<ul>
+<li>
+<pre><code class="language-python">from django.db import models
+class 模型类名(models.Model):
+    字段名 = models.字段类型(字段选项)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>数据库迁移</p>
+<ul>
+<li>生成迁移文件 执行 <code>py manage.py makemigrations</code></li>
+<li>执行迁移脚本程序 执行 <code>py manage.py migrate</code></li>
+</ul>
+</li>
+<li>
+<p>字段类型</p>
+<ul>
+<li>BooleanField()
+<ul>
+<li>数据库类型：tinyint(1)</li>
+</ul>
+</li>
+<li>CharField()
+<ul>
+<li>数据库类型：varchar</li>
+<li>注意：必须要指定max_length参数值</li>
+</ul>
+</li>
+<li>DateField()
+<ul>
+<li>数据库类型：date</li>
+<li>参数 <code>auto_now=True/False</code> <code>auto_now_add=True/False</code> <code>default=xxxx-x-x</code> 三选一</li>
+</ul>
+</li>
+<li>DateTimeField()
+<ul>
+<li>数据库类型：datetime(6)</li>
+<li>参数同DateField</li>
+</ul>
+</li>
+<li>FloatField()</li>
+<li>DecimalField()
+<ul>
+<li>数据库类型：decimal(x,y)</li>
+<li>参数 <code>max_digits</code> <code>decimal_places</code></li>
+</ul>
+</li>
+<li>EmailField()</li>
+<li>IntergerField()</li>
+<li>ImageField()
+<ul>
+<li>数据库类型：varchar(100)</li>
+<li>保存为图片的路径</li>
+</ul>
+</li>
+<li>TextField()
+<ul>
+<li>数据库类型：longtext</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>字段选项</p>
+<ul>
+<li>多个选项用 <code>,</code> 隔开</li>
+<li>primary_key：如果设置为True，则为主键，不创建id字段</li>
+<li>blank：设置为True时，字段可以为空</li>
+<li>null：如果设置为True，则表示该列值可以为空。默认为False，如果为false建议加入default选项设置默认值</li>
+<li>default：设置所在列的默认值</li>
+<li>db_index：如果为True，表示为该列添加索引</li>
+<li>unique：如果为True，表示该字段在数据库中的值必须唯一</li>
+<li>db_column：指定列的名称，不指定则采用属性名为列名</li>
+<li>verbose_name：设置此字段在admin界面上的显示名称</li>
+</ul>
+</li>
+<li>
+<p>模型类-Meta类</p>
+<ul>
+<li>
+<p>使用Meta类可以给模型赋予属性，meta类下有很多内建的类属性，可以对模型类做一些控制</p>
+</li>
+<li>
+<pre><code class="language-python">#使用meta类更改当前模型类的表名
+class Book(models.Model):
+    #...
+    class Meta:
+        db_table = 'book'
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>ORM操作</p>
+<ul>
+<li>
+<p>ORM CRUB核心 -&gt; 模型类.管理器对象</p>
+<ul>
+<li>
+<p>每个继承自models.Model的模型类，都会有一个objects对象被同样继承下来。这个对象就是管理器对象</p>
+</li>
+<li>
+<pre><code class="language-python">#数据库的增删查改可以通过模型的管理器实现
+class MyModel(models.Model):
+    #...
+MyModel.objects.create(...) #objects是管理对象
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>创建数据</p>
+<ul>
+<li>
+<pre><code class="language-python">#方案一
+MyModel.objects.create(...)
+#成功：返回创建好的实体对象
+#失败：异常
+</code></pre>
+</li>
+<li>
+<pre><code class="language-python">#创建MyModel对象，并调用save()进行保存
+obj = MyModel(...)
+obj.property = value
+obj.save()
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>查询操作</p>
+<ul>
+<li>查询方法: <code>all()</code>  <code>get()</code> <code>filter()</code> <code>values(‘列名’)</code> <code>values_list(‘列1’)</code> <code>order_by</code></li>
+<li>可以在模型类中定义 <code>__str__</code> 方法，自定义输出QuerySet中的输出格式</li>
+<li>条件查询 <code>filter(条件)</code>  <code>exclude</code> 多个条件为and关系</li>
+<li>查询谓词：类属性+‘__’+谓词</li>
+</ul>
+</li>
+<li>
+<p>更新操作</p>
+<ul>
+<li>一查二改三保存</li>
+<li>批量，使用QuerySet的 <code>update()</code></li>
+</ul>
+</li>
+<li>
+<p>删除数据</p>
+<ul>
+<li>单个/批量数据删除 <code>object.delete()</code>  	！注意使用 <code>try…except</code></li>
+<li>伪删除 is_active</li>
+</ul>
+</li>
+<li>
+<p>F对象</p>
+<ul>
+<li>
+<p>一个F对象代表数据库中某条记录的字段的信息</p>
+</li>
+<li>
+<p>作用</p>
+<ul>
+<li>通常是对数据库中的字段值在不获取的情况下进行操作</li>
+<li>用于类属性之间的比较</li>
+</ul>
+</li>
+<li>
+<pre><code class="language-python">from django.db.models import F
+F('列名')
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Q对象：查询时使用或、非等逻辑的操作</p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="9-admin管理后台">9 admin管理后台</h5>
+<ul>
+<li>
+<p>定义</p>
+<ul>
+<li>django提供了比较完善的后台管理数据库的接口</li>
+<li>django会搜集所有已注册的模型类，为这些模型类提供数据管理页面，供开发者使用</li>
+</ul>
+</li>
+<li>
+<p>注册自定义模型类</p>
+<ul>
+<li>如果要自己定义的模型类也能在/admin后台中显示和管理，需要将自己的类注册到后台管理页面</li>
+<li>在应用app中的admin.py中导入注册要管理的模型models类</li>
+<li>调用admin.site.register方法进行注册</li>
+</ul>
+</li>
+<li>
+<p>模型管理器类</p>
+<ul>
+<li>
+<p>作用：为后台管理界面添加便于操作的新功能</p>
+</li>
+<li>
+<p>说明：后台管理器类须继承自django.contrib.admin里的ModelAdmin类</p>
+</li>
+<li>
+<pre><code class="language-python">#使用方法
+#1.在&lt;应用app&gt;/admin.py里定义模型管理器类
+class XXXManager(admin.ModelAdmin):
+    ...
+#2.绑定注册模型管理器和模型类
+from django.contrib import admin
+from .models import *
+admin.site.register(YYYY,XXXXManager)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>再谈Meta类</p>
+<ul>
+<li>
+<pre><code class="language-python">通过Meta内嵌类定义模型类的属性，用法如下：
+	class Book(models.Model):
+        title = CharField(...)
+
+        class Meta:
+            #该模型所用数据表的名称（设置完成后需要立马更新同步数据库）
+            db_table='数据表名'
+            #给模型对象的一个易于理解的名称（单数），用于显示在/admin管理页面中
+            verbose_name='单数名'
+            #该对象复数形式的名称
+            verbose_name_plural='复数名'
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="10-关系映射">10 关系映射</h5>
+<ul>
+<li>
+<p>常见的关系映射：一对一，一对多，多对多</p>
+</li>
+<li>
+<p>一对一</p>
+<ul>
+<li>
+<pre><code class="language-python">class A(model.Model):
+    ...
+
+class B(model.Model):
+    属性 = models.OneToOneField(A, on_delete=xxx)
+</code></pre>
+</li>
+<li>
+<p>on_delete级联删除</p>
+<ul>
+<li>models.CASCADE</li>
+<li>models.PROTECT</li>
+<li>SET_NULL</li>
+<li>SET_DEFAULT</li>
+</ul>
+</li>
+<li>
+<p>查询数据</p>
+</li>
+</ul>
+</li>
+<li>
+<p>一对多</p>
+<ul>
+<li><code>OneToOneField</code> 换成 <code>Foreign Key</code></li>
+<li>反向查询：使用 <code>class_set.all()</code></li>
+</ul>
+</li>
+<li>
+<p>多对多</p>
+<ul>
+<li><code>OneToOneField</code> 换成 <code>ManyToManyField</code></li>
+</ul>
+</li>
+</ul>
+<h5 id="11-cookies和session">11 cookies和session</h5>
+<ul>
+<li>
+<p>会话</p>
+<ul>
+<li>从打开浏览器访问一个网站，到关闭浏览器结束此次访问，称之为一次会话</li>
+<li>HTTP协议无状态，导致会话状态难以保持</li>
+</ul>
+</li>
+<li>
+<p>cookie是保存在客户端浏览器上的存储空间</p>
+<ul>
+<li>cookies在浏览器上是以键字对的形式储存的</li>
+<li>储存的数据是有生命周期的</li>
+<li>cookies中的数据是按域存储隔离的，不同域之间无法访问</li>
+<li>cookies内部的数据会在每次访问此网址时都会携带到服务器端，如果cookies过大会降低响应速度</li>
+</ul>
+</li>
+<li>
+<p>cookie的使用</p>
+<ul>
+<li>存储：<code>HttpResponse.set_cookie(key, value=‘’, max_age=None, expires=None)</code></li>
+</ul>
+</li>
+<li>
+<p>session</p>
+<ul>
+<li>
+<p>session是在服务器上开辟一段空间用于保留浏览器和服务器交互时的重要数据</p>
+</li>
+<li>
+<p>实现方式</p>
+<ul>
+<li>使用session需要在浏览器客户端启动cookie，且在cookie中存储sessionid</li>
+<li>每个客户端都可以在服务器端有一个独立的session</li>
+<li>注意：不同的请求者之间不会共享这个数据，与请求者一一对应</li>
+</ul>
+</li>
+<li>
+<p>session使用</p>
+<ul>
+<li>
+<pre><code class="language-python">#保存session值到服务器
+request.session['KEY']=VALUE
+#获取session的值
+value = request.session['KEY']
+value = request.session.get('KEY',默认值)
+#删除session
+del request.session['KEY']
+</code></pre>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="12-缓存">12 缓存</h5>
+<ul>
+<li>
+<p>定义：一类可以更快的读取数据的介质的统称，也指其他可以加快数据读取的储存方式。一般用来存储临时数据。</p>
+</li>
+<li>
+<p>意义：视图渲染有一定成本，数据库的频繁查询过高，所以对于低频变动的页面可以考虑使用缓存技术，减少实际渲染次数，用户拿到相应的时间成本会更低</p>
+</li>
+<li>
+<p>django设置缓存</p>
+<ul>
+<li>
+<p>数据库缓存</p>
+</li>
+<li>
+<pre><code class="language-python">#数据库缓存配置，需要手动执行 创建表 的 命令
+CACHES = {
+    'default':{
+        'BACKEND': 'django.core.cache.backends.db.DatabaseCache',
+        'LOCATION': 'my_cache_table',
+        'TIMEOUT': 300, #缓存保存时间，单位秒，默认300
+        'OPTIONS':{
+            'MAX_ENTRIES': 300,  #缓存最大数据条数
+            'CULL_FREQUENCY': 2, #缓存条数达到最大值时，删除1/x的缓存数据
+        }
+    }
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>使用缓存</p>
+<ul>
+<li>
+<pre><code class="language-python">#视图函数中
+from django.views.decorators.cache import cache_page
+
+@cache_page(30) #单位s
+def my_view(request):
+    ...
+</code></pre>
+</li>
+<li>
+<pre><code class="language-python">#路由中
+from django.views.decorators.cache import chae_page
+urlpagtterns = [
+    path('foo/', chae_page(60)(my_view))
+]
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="13-中间件">13 中间件</h5>
+<ul>
+<li>
+<p>定义</p>
+<ul>
+<li>中间件是django请求/响应处理的钩子框架。它是一个轻量级的、低级的“插件”系统，用于全局改变django的输入和输出</li>
+<li>中间件以类的形式体现</li>
+<li>每个中间件组件负责做一些特定的功能</li>
+</ul>
+</li>
+<li>
+<p>编写中间件</p>
+<ul>
+<li>中间件继承自 <code>django.utils.deprecation.MiddlewareMixin</code> 类</li>
+<li>中间件类实现下列五个方法的一个或多个
+<ul>
+<li><code>process_request(self, request)</code> 执行路由之前被调用，在每个请求上调用返回NONE或HttpResponse对象</li>
+<li><code>process_view(self, request, callback, callback_args, callback_kwargs)</code> 调用视图之前被调用，在每个请求上调用返回NONE或HttpResponse对象</li>
+<li><code>process_response(self, request, response)</code> 所有响应返回浏览器被调用，在每个请求上调用，返回HttpResponse对象</li>
+<li><code>process_exception(self, request, exception)</code> 当处理过程中抛出异常时调用，返回一个HttpResponse对象</li>
+<li><code>process_template_response(self, request, response)</code> 在视图函数执行完毕且试图返回的对象中包含有render时被调用；该方法需要返回实现了render方法的响应对象</li>
+</ul>
+</li>
+<li>中间件大多数方法在返回none时表示忽略当前操作进入下一项事件，当返回httpresponse对象时表示请求结束，直接返回给客户端</li>
+</ul>
+</li>
+<li>
+<p>注册中间件</p>
+<ul>
+<li>
+<pre><code class="language-python">#setting.py
+MIDDLEWARE = [
+    ...
+]
+</code></pre>
+</li>
+<li>
+<p>注意：中间件被调用时以“先上到下”再“由下到上”的顺序调用</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CSRF攻击</p>
+<ul>
+<li>
+<p>跨站伪造请求攻击：某些恶意网站上包含链接、表单按钮或者jvascript，它们会利用登录过的用户再浏览器中的认证方式试图在网站上完成某些操作</p>
+</li>
+<li>
+<p>防范：django采用‘对比暗号’机制防范攻击。cookies中存储暗号1，模板中表单里藏着暗号2，用户只有在本网站下提交数据，暗号2才会随表单提交给服务器，django对比两个暗号，对比成功，则认为是合法请求，否则是违法请求-403</p>
+</li>
+<li>
+<p>配置：在模板中，form标签下添加标签 <code>{% csrf_token %}</code></p>
+</li>
+<li>
+<p>特殊说明：如果某个试图不需要django进行csrf保护，可以用装饰器关闭对此视图的检查</p>
+<ul>
+<li>
+<pre><code class="language-python">from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def my_view(request):
+    ...
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="14-分页">14 分页</h5>
+<ul>
+<li>在web页面有大量数据需要显示，为了阅读方便在每个分页中显示部分数据</li>
+<li>django提供了Paginator类实现分页功能，位于 <code>django.core.paginator</code> 模块中</li>
+<li>paginator对象：<code>Paginator(object_list, per_page)</code>
+<ul>
+<li>object_list 需要分页数据的对象列表</li>
+<li>per_page 每页数据个数</li>
+<li>返回值paginator对象</li>
+</ul>
+</li>
+<li>paginator属性
+<ul>
+<li>count 需要分页数据的对象总数</li>
+<li>num_pages 分页后的页面总数</li>
+<li>page_range 从1开始的range对象，用于记录当前页面页码</li>
+<li>per_page 每页数据的个数</li>
+</ul>
+</li>
+<li>paginator方法
+<ul>
+<li>.page(number) 返回当前Number页的对应页信息，如果不存在，抛出invalidpage异常</li>
+<li>.has_next() 如果有下一页返回true</li>
+<li>.has_previous()</li>
+<li>.has_other_pages()</li>
+<li>.next_page_number() 返回下一页的页码</li>
+<li>.previous_page_number</li>
+</ul>
+</li>
+</ul>
+<h5 id="15-内建用户系统">15 内建用户系统</h5>
+<ul>
+<li>Django带有一个用户认证系统。它处理用户账号、组、权限以及基于cookie的用户会话。用户可以直接使用django自带的用户表</li>
+<li>基本字段
+<ul>
+<li><code>from django.contrib.auth.models import User</code></li>
+<li></li>
+</ul>
+</li>
+</ul>
+</article>
+
+
+      
+        <div class="my-4">
+    
+    <a href="/tags/%E7%AC%94%E8%AE%B0/" class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#笔记</a>
+    
+</div>
+      
+
+      
+
+
+
+      
+        <div class="py-2">
+  
+    <div class="my-8 flex flex-col items-center md:flex-row">
+      <a href="/authors/young1881/" class="md:me-4 text-primary-text h-24 w-24">
+        
+        
+          <i class="fas fa-user-circle fa-6x"></i>
+        
+      </a>
+      <div class="mt-4 w-full md:mt-0 md:w-auto">
+        <a
+          href="/authors/young1881/"
+          class="mb-2 block border-b pb-1 text-lg font-bold"
+        >
+          <h3>young1881</h3>
+        </a>
+        <span class="block pb-2"></span>
+        
+      </div>
+    </div>
+  
+</div>
+
+      
+
+      
+  <div
+    class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"
+  >
+    <div>
+      
+        <span class="text-primary-text block font-bold"
+          >上一页</span
+        >
+        <a href="/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/" class="block">协程 &amp; 异步编程(asyncio)</a>
+      
+    </div>
+    <div class="mt-4 md:mt-0 md:text-right">
+      
+        <span class="text-primary-text block font-bold">下一页</span>
+        <a href="/posts/%E4%B9%A6%E8%AF%84%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%9A%84%E5%9B%BD%E6%B0%91%E4%BD%93%E7%B3%BB/" class="block">书评：《政治经济学的国民体系》</a>
+      
+    </div>
+  </div>
+
+
+      
+
+
+
+    </div>
+    
+
+    
+    
+  </div>
+
+  
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        hljs.highlightAll();
+      });
+    </script>
+
+          </div>
+        </div>
+      
+    </main>
+    <footer class="pl-scrollbar">
+      <div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b">
+    <p class="text-sm text-tertiary-text">Copyright &copy; 2022 young1881
+ &middot;  Powered by Hugo</p>
+</div></div>
+    </footer>
+  </body>
+</html>
