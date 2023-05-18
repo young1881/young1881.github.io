@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on young1881</title>
-    <link>/categories/</link>
+    <link>https://young1881.github.io/categories/</link>
     <description>Recent content in Categories on young1881</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright &amp;copy; 2022 young1881
 </copyright>
-    <lastBuildDate>Wed, 14 Sep 2022 23:20:50 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Sep 2022 23:20:50 +0000</lastBuildDate><atom:link href="https://young1881.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学习</title>
-      <link>/categories/%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://young1881.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Wed, 14 Sep 2022 23:20:50 +0000</pubDate>
       
-      <guid>/categories/%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://young1881.github.io/categories/%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>读万卷书</title>
-      <link>/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</link>
+      <link>https://young1881.github.io/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</link>
       <pubDate>Tue, 16 Nov 2021 23:20:50 +0000</pubDate>
       
-      <guid>/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</guid>
+      <guid>https://young1881.github.io/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</guid>
       <description></description>
     </item>
     

@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/authors/</loc>
+    <loc>https://young1881.github.io/authors/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://young1881.github.io/categories/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</loc>
+    <loc>https://young1881.github.io/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>https://young1881.github.io/tags/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/authors/young1881/</loc>
+    <loc>https://young1881.github.io/authors/young1881/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
+    <loc>https://young1881.github.io/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://young1881.github.io/tags/%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
+    <loc>https://young1881.github.io/posts/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://young1881.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-09-14T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</loc>
+    <loc>https://young1881.github.io/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</loc>
     <lastmod>2022-08-21T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://young1881.github.io/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2022-06-12T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</loc>
+    <loc>https://young1881.github.io/categories/%E8%AF%BB%E4%B8%87%E5%8D%B7%E4%B9%A6/</loc>
     <lastmod>2021-11-16T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E6%9D%8E%E6%96%AF%E7%89%B9/</loc>
+    <loc>https://young1881.github.io/tags/%E6%9D%8E%E6%96%AF%E7%89%B9/</loc>
     <lastmod>2021-11-16T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/%E4%B9%A6%E8%AF%84%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%9A%84%E5%9B%BD%E6%B0%91%E4%BD%93%E7%B3%BB/</loc>
+    <loc>https://young1881.github.io/posts/%E4%B9%A6%E8%AF%84%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6%E7%9A%84%E5%9B%BD%E6%B0%91%E4%BD%93%E7%B3%BB/</loc>
     <lastmod>2021-11-16T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
+    <loc>https://young1881.github.io/tags/%E6%94%BF%E6%B2%BB%E7%BB%8F%E6%B5%8E%E5%AD%A6/</loc>
     <lastmod>2021-11-16T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/tags/%E5%93%88%E8%80%B6%E5%85%8B/</loc>
+    <loc>https://young1881.github.io/tags/%E5%93%88%E8%80%B6%E5%85%8B/</loc>
     <lastmod>2021-10-12T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/posts/%E4%B9%A6%E8%AF%84%E8%B4%A7%E5%B8%81%E7%9A%84%E9%9D%9E%E5%9B%BD%E5%AE%B6%E5%8C%96/</loc>
+    <loc>https://young1881.github.io/posts/%E4%B9%A6%E8%AF%84%E8%B4%A7%E5%B8%81%E7%9A%84%E9%9D%9E%E5%9B%BD%E5%AE%B6%E5%8C%96/</loc>
     <lastmod>2021-10-12T23:20:50+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/chapter-1/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/chapter-1/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/nested-chapter/chapter-1/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/nested-chapter/chapter-1/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/chapter-2/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/chapter-2/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/nested-chapter/chapter-2/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/nested-chapter/chapter-2/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/</loc>
+    <loc>https://young1881.github.io/docs/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/docs/example-doc/nested-chapter/</loc>
+    <loc>https://young1881.github.io/docs/example-doc/nested-chapter/</loc>
     <lastmod>2020-10-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/authors/example-author/</loc>
+    <loc>https://young1881.github.io/authors/example-author/</loc>
   </url><url>
-    <loc>/authors/hugo-authors/</loc>
+    <loc>https://young1881.github.io/authors/hugo-authors/</loc>
   </url><url>
-    <loc>/series/</loc>
+    <loc>https://young1881.github.io/series/</loc>
   </url>
 </urlset>

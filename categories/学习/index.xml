@@ -2,37 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>学习 on young1881</title>
-    <link>/categories/%E5%AD%A6%E4%B9%A0/</link>
+    <link>https://young1881.github.io/categories/%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 学习 on young1881</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>Copyright &amp;copy; 2022 young1881
 </copyright>
-    <lastBuildDate>Wed, 14 Sep 2022 23:20:50 +0000</lastBuildDate><atom:link href="/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 14 Sep 2022 23:20:50 +0000</lastBuildDate><atom:link href="https://young1881.github.io/categories/%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lecture Notes on Data Curation for Interactive Visualisation</title>
-      <link>/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</link>
+      <link>https://young1881.github.io/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</link>
       <pubDate>Wed, 14 Sep 2022 23:20:50 +0000</pubDate>
       
-      <guid>/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</guid>
+      <guid>https://young1881.github.io/posts/lecture-notes-on-data-curation-for-interactive-visualisation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>协程 &amp; 异步编程(asyncio)</title>
-      <link>/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</link>
+      <link>https://young1881.github.io/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</link>
       <pubDate>Sun, 21 Aug 2022 23:20:50 +0000</pubDate>
       
-      <guid>/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</guid>
+      <guid>https://young1881.github.io/posts/%E5%8D%8F%E7%A8%8B-%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8Basyncio/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Django学习笔记</title>
-      <link>/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <link>https://young1881.github.io/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Sun, 12 Jun 2022 23:20:50 +0000</pubDate>
       
-      <guid>/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://young1881.github.io/posts/django%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;p&gt;利用Django进行web开发时编写的笔记&lt;/p&gt;</description>
     </item>
     
